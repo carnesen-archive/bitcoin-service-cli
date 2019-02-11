@@ -1,7 +1,7 @@
 {
   "name": "@carnesen/bitcoin-service-cli",
   "description": "A command-line interface for managing the bitcoin server process `bitcoind`",
-  "version": "0.0.0-0",
+  "version": "0.0.0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "bin": {
