@@ -10,7 +10,7 @@ const pkg = require('../package.json');
 export const bitcoinService = branch({
   commandName: 'bitcoin-service',
   description: 'Manage the bitcoin service `bitcoind`',
-  subcommands: [restart, start, stop, status],
+  subcommands: [start, stop, restart, status],
   version: pkg.version,
 });
 

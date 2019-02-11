@@ -23,12 +23,12 @@
   },
   "dependencies": {
     "@carnesen/bitcoin-config": "0.0.3",
-    "@carnesen/bitcoin-service": "0.0.0-0",
-    "@carnesen/bitcoin-software": "0.0.2",
-    "@carnesen/cli": "0.3.2",
-    "@carnesen/run-and-exit": "0.2.0"
+    "@carnesen/bitcoin-service": "0.0.0",
+    "@carnesen/cli": "0.3.2"
   },
   "devDependencies": {
+    "@carnesen/bitcoin-software": "0.0.2",
+    "@carnesen/run-and-exit": "0.2.0",
     "@carnesen/tsconfig": "0.1.0",
     "@carnesen/tslint-config": "0.1.2",
     "@types/jest": "24.0.0",
