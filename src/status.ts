@@ -1,14 +1,13 @@
 import { isServiceRunning } from '@carnesen/bitcoin-service';
 import { leaf } from '@carnesen/cli';
-import { serviceOptions } from './service-options';
-
-const { conf } = serviceOptions;
+import { configFilePath } from './options';
+import { DEFAULT_CONFIG_FILE_PATH } from '@carnesen/bitcoin-config';
 
 export const status = leaf({
   commandName: 'status',
-  options: { conf },
-  async action({ conf }) {
-    const running = await isServiceRunning({ conf: conf || undefined });
+  options: { configFilePath },
+  async action({ configFilePath }) {
+    const running = await isServiceRunning(configFilePath || DEFAULT_CONFIG_FILE_PATH);
     return {
       running,
     };

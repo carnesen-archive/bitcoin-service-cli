@@ -1,16 +1,13 @@
 import { leaf } from '@carnesen/cli';
-import { serviceOptions } from './service-options';
+import { configFilePath } from './options';
 import { stopService } from '@carnesen/bitcoin-service';
-
-const { conf } = serviceOptions;
+import { DEFAULT_CONFIG_FILE_PATH } from '@carnesen/bitcoin-config';
 
 export const stop = leaf({
   commandName: 'stop',
-  options: { conf },
-  async action({ conf }) {
-    const { changed } = await stopService({
-      conf: conf || undefined,
-    });
+  options: { configFilePath },
+  async action({ configFilePath }) {
+    const { changed } = await stopService(configFilePath || DEFAULT_CONFIG_FILE_PATH);
     return changed ? 'Bitcoin server stopping' : 'Bitcoin server is not running';
   },
 });
