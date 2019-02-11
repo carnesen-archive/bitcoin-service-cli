@@ -8,9 +8,8 @@ import { stop } from './stop';
 const pkg = require('../package.json');
 
 export const bitcoinService = branch({
-  commandName: 'bitcoind',
-  description:
-    'A command-line interface for managing the bitcoin server process `bitcoind`',
+  commandName: 'bitcoin-service',
+  description: 'Manage the bitcoin service `bitcoind`',
   subcommands: [restart, start, stop, status],
   version: pkg.version,
 });
